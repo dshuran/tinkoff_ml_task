@@ -57,6 +57,7 @@ def main():
         a.append(row_list)
     # Scenario
     while True:
+        print('------------------------\n', end='')
         a = get_new_world(a, n)
         # Output
         for i in range(n):
@@ -64,7 +65,6 @@ def main():
                 print(a[i][j], end='')
             print('\n', end='')
         time.sleep(1)
-        print('------------------------\n', end='')
 
 
 if __name__ == '__main__':
