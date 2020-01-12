@@ -9,7 +9,6 @@ def get_cell_changes(a, n, cell_i, cell_j):
             new_i = cell_i + di
             new_j = cell_j + dj
             if 0 <= new_i < n and 0 <= new_j < n:
-                # print('new i = ', new_i, ' new j = ', new_j, ' n = ', n)
                 if a[new_i][new_j] == 's':
                     neigh_shrimps = neigh_shrimps + 1
                 elif a[new_i][new_j] == 'f':
@@ -47,7 +46,7 @@ def get_new_world(a, n):
     return next_world
 
 
-# s - креветка, f - рыба, r - скала, e - пустое место
+# s - креветка (shrimp), f - рыба (fish), r - скала (rock), e - пустое место (empty)
 def main():
     # Input
     n = int(input())
@@ -56,11 +55,9 @@ def main():
         row = input()
         row_list = list(row)
         a.append(row_list)
-    print(a)
     # Scenario
     while True:
         a = get_new_world(a, n)
-        # print('new a = ', a)
         # Output
         for i in range(n):
             for j in range(n):
